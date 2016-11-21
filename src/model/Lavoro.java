@@ -1,25 +1,18 @@
 package model;
 
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
-public class Cliente {
+public class Lavoro {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long idCliente;
-	
-	@Column(unique = true, nullable = false)
-	private String nome;
-	@Column(unique = true, nullable = false)
-	private String cognome;
-	
-	
-	
-	
+	private Long idLavoro;
 
 }

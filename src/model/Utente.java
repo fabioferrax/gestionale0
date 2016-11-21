@@ -7,19 +7,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Cliente {
+public class Utente {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long idCliente;
+	private Long idUtente;
 	
 	@Column(unique = true, nullable = false)
-	private String nome;
-	@Column(unique = true, nullable = false)
-	private String cognome;
+	private String username;
 	
-	
-	
+	@Column(nullable = false)
+	private String password;
 	
 
 }
